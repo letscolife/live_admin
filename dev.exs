@@ -57,7 +57,7 @@ Application.put_env(:live_admin, :css_overrides, {DemoWeb.Renderer, :render_css,
 Application.put_env(:live_admin, :gettext_backend, Demo.Gettext)
 
 defmodule DemoWeb.Renderer do
-  use Phoenix.HTML
+  import Phoenix.HTML
 
   def render_field(record, field, _session) do
     record
@@ -324,7 +324,7 @@ end
 
 defmodule DemoWeb.CreateUserForm do
   use Phoenix.LiveComponent
-  use Phoenix.HTML
+  import Phoenix.HTML
 
   import LiveAdmin, only: [route_with_params: 2]
   import LiveAdmin.ErrorHelpers
